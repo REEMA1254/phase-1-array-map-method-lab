@@ -14,3 +14,29 @@ const tutorials = [
 const titleCased = () => {
   return tutorials
 }
+function titleCased() {
+
+  const titleCasedTutorials = tutorials.map(function(tutorial) {
+
+    const words = tutorial.split(" ");
+
+    const titleCasedTutorial = words.map(function(word) {
+      return word.charAt(0).toUpperCase() + word.slice(1);
+    }); [
+          "What Does The This Keyword Mean?",
+          "What Is The Constructor OO Pattern?",
+          "Implementing Blockchain Web API",
+          "The Test Driven Development Workflow",
+          "What Is NaN And How Can We Check For It",
+          "What Is The Difference Between StopPropagation And PreventDefault?",
+          "Immutable State And Pure Functions",
+          "What Is The Difference Between == And ===?",
+          "What Is The Difference Between Event Capturing And Bubbling?",
+          "What Is JSONP?"
+      ]
+    
+    return titleCasedTutorial.join(" ");
+  });
+
+  return titleCasedTutorials;
+}
